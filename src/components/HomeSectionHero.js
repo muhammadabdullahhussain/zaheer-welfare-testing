@@ -11,6 +11,7 @@ import useIsMobile from '@/hooks/useIsMobile'
 const HomeSectionHero = () => {
   const pathname = usePathname()
   const isMobile = useIsMobile()
+
   return (
     <>
       {pathname === '/' && !isMobile ? (<div className="z-0 bg-[url('https://preview.colorlib.com/theme/lovecare/images/bg_1.jpg.webp')] bg-cover bg-center h-screen w-screen left-0 ">

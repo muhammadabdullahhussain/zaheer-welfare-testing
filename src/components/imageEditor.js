@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useFirestore } from '@/lib/firestoreContext'; 
 import { storage } from '@/config/firebaseConfig'; 
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+import Image from 'next/image';
 
 const ImageEditor = ({ imageId, currentImageUrl }) => {
   const { updateImage } = useFirestore();
@@ -54,7 +55,13 @@ const ImageEditor = ({ imageId, currentImageUrl }) => {
 
   return (
     <div>
-      <img src={newUrl} alt="Current" style={{ width: '100px', height: '100px' }} />
+      <Image 
+           src={newUrl}  
+        alt="Current"
+        width={500}        
+        height={400}       
+         style={{ width: '100px', height: '100px' }}
+      />
       <input type="file" onChange={handleFileChange} />
       <button onClick={handleUpload} disabled={uploading}>
         {uploading ? 'Uploading...' : 'Update Image'}

@@ -156,25 +156,26 @@ function Page() {
   // };
   const handleImageClick = (item) => {
     setImageToUpdate(item);
-    fileInputRef.current?.click(); 
+    fileInputRef.current?.click();
   };
   const handleItemClick = (item, index) => {
     setCurrentImageIndex(index);
     setShowModal(true);
   };
-  
+
   const handlePrevItem = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex > 0 ? prevIndex - 1 : images.length - 1
     );
   };
-  
+
   const handleNextItem = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex < images.length - 1 ? prevIndex + 1 : 0
     );
   };
-   
+
+
   const handlers = useSwipeable({
     onSwipedLeft: handleNextItem,
     onSwipedRight: handlePrevItem,
@@ -206,19 +207,19 @@ function Page() {
 
   return (
     <div className="px-5 pb-6 pt-10 md:px-12 lg:px-32 relative">
-      <div className="relative bg-[url('https://firebasestorage.googleapis.com/v0/b/zaheerwelfareservices.appspot.com/o/images%2FZaheer_Welfare_Photos__page-0062_xscmut.jpg?alt=media&token=1a67da49-6b30-41ec-95e1-481e0a40bfdb')] bg-cover  bg-center md:h-[70vh] h-[30vh] mb-20">
+ <div className="relative bg-[url('https://firebasestorage.googleapis.com/v0/b/zaheerwelfareservices.appspot.com/o/images%2FZaheer_Welfare_Photos__page-0062_xscmut.jpg?alt=media&token=1a67da49-6b30-41ec-95e1-481e0a40bfdb')] bg-cover  bg-center md:h-[70vh] h-[30vh] mb-20">
 
-        <div className="absolute inset-0 bg-black/50"></div>
+  <div className="absolute inset-0 bg-black/50"></div>
 
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-          <h1 className="text-4xl` md:text-5xl font-extrabold tracking-wide drop-shadow-lg">
-            Recent Events
-          </h1>
-          <p className="mt-3 text-lg md:text-xl text-gray-200">
-            Home <span className="mx-2">&larr;</span> Gallery
-          </p>
-        </div>
-      </div>  
+  <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+    <h1 className="text-4xl` md:text-5xl font-extrabold tracking-wide drop-shadow-lg">
+      Recent Events
+    </h1>
+    <p className="mt-3 text-lg md:text-xl text-gray-200">
+      Home <span className="mx-2">&larr;</span> Gallery
+    </p>
+  </div>
+</div>  
 
       {isUploading && (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
@@ -258,8 +259,8 @@ function Page() {
               .map((item, index) => (
                 <div key={index} className="relative p-1 w-[100%] h-[100%]">
                   {item.type === 'video' ? (
-                    <div className="relative group w-full h-0 pb-[56.25%] cursor-pointer"    
-                         onClick={() => handleItemClick(item, images.length - 1 - index)}
+                    <div className="relative group w-full h-0 pb-[56.25%] cursor-pointer"
+                      onClick={() => handleItemClick(item, images.length - 1 - index)}
                     >
                       <video
                         className="absolute top-0 left-0 w-full h-full object-cover rounded-md"
@@ -340,14 +341,14 @@ function Page() {
           </Masonry>
         </ResponsiveMasonry>
       )}
-   <GalleryModal
-  showModal={showModal}
-  setShowModal={setShowModal}
-  currentItem={images[currentImageIndex]}
-  onPrev={handlePrevItem}
-  onNext={handleNextItem}
-  swipeHandlers={handlers}
-/>
+      <GalleryModal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        currentItem={images[currentImageIndex]}
+        onPrev={handlePrevItem}
+        onNext={handleNextItem}
+        swipeHandlers={handlers}
+      />
       {showVideoModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-100">
           <div className="relative w-full h-full">

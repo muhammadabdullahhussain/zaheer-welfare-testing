@@ -1,10 +1,9 @@
 'use client'
+
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
-
 import { metaData } from "@/utils/seo";
 import log from "../assets/images/log.png";
 import { FaXTwitter } from "react-icons/fa6";
@@ -19,7 +18,7 @@ export const metadata = {
 };
 
 const Footer = () => {
-  const isMobile = useIsMobile()
+   const isMobile = useIsMobile()
 
   return (
     <div className="bg-[#b5e7ed] md:items-center    md:flex-col w-full px-5 md:px-16 overflow-hidden md:flex gap-3 lg:px-8 justify-between text-black">
@@ -31,124 +30,124 @@ const Footer = () => {
               alt="My Image"
               width={100}
               height={100}
-            />
+              className="  " />
             <p className="text-[16px] pt-3 w-full md:text-start text-center  whitespace-normal break-normal ">
               Over the past few months, the Zaheer Welfare Foundation has carved a remarkable path in the heart of Fatima Manzil, XYZ. With a vision rooted in compassion and service, we continue to uplift lives, strengthen communities, and spread hope where it’s needed most.
             </p>
 
 
           </div>
-
+          
           <div className="flex md:w-[59%] md:flex-row flex-col    justify-evenly  ">
-            <div className="flex md:w-[50%] w-[100%] md:px-0 px-7 md:bg-[#b5e7ed]     justify-between md:justify-evenly ">
-              <div className={` flex flex-col ${!isMobile ? 'items-start' : ''} gap-0   md:w-[45%] py-4 md:py-10 md:mt-28 lg:mt-5`}>
-                <h2 className="text-xl  font-semibold text-[#EF1E60]">
-                  Our Campaigns
-                </h2>
-                <div className="flex  flex-col items-start pt-5">
-                  <ul className=" space-y-3  text-white">
-                    <li className="relative group">
-                      <Link
-                        href="#"
-                        className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `} >
-                        Qurbani
-                      </Link>
-                      <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
-                    </li>
-                    <li className="relative group">
-                      <Link
-                        href="#"
-                        className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `} >
-                        Zakat
-                      </Link>
-                      <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
-                    </li>
-                    <li className="relative group">
-                      <Link
-                        href="#"
-                        className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `}>
-                        Fitrana
-                      </Link>
-                      <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
-                    </li>
-                    <li className="relative group">
-                      <Link
-                        href="#"
-                        className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `}>
-                        Old Age Home
-                      </Link>
-                      <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
-                    </li>
-                    <li className="relative group">
-                      <Link
-                        href="#"
-                        className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `}>
-                        Orphanage
-                      </Link>
-                      <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
-                    </li>
-                    <li className="relative group">
-                      <Link
-                        href="#"
-                        className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `}>
-                        Ambulance
-                      </Link>
-                      <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
-                    </li>
+           <div className="flex md:w-[50%] w-[100%] md:px-0 px-7 md:bg-[#b5e7ed]     justify-between md:justify-evenly ">
+             <div className={` flex flex-col ${!isMobile ? 'items-start' : ''} gap-0   md:w-[45%] py-4 md:py-10 md:mt-28 lg:mt-5`}>
+              <h2 className="text-xl  font-semibold text-[#EF1E60]">
+                Our Campaigns
+              </h2>
+              <div className="flex  flex-col items-start pt-5">
+                <ul className=" space-y-3  text-white">
+                  <li className="relative group">
+                    <Link
+                      href="#"
+                      className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `} >
+                      Qurbani
+                    </Link>
+                    <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
+                  </li>
+                  <li className="relative group">
+                    <Link
+                      href="#"
+                      className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `} >
+                      Zakat
+                    </Link>
+                    <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
+                  </li>
+                  <li className="relative group">
+                    <Link
+                      href="#"
+                      className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `}>
+                      Fitrana
+                    </Link>
+                    <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
+                  </li>
+                  <li className="relative group">
+                    <Link
+                      href="#"
+                      className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `}>
+                      Old Age Home
+                    </Link>
+                    <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
+                  </li>
+                  <li className="relative group">
+                    <Link
+                      href="#"
+                      className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `}>
+                      Orphanage
+                    </Link>
+                    <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
+                  </li>
+                  <li className="relative group">
+                    <Link
+                      href="#"
+                      className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `}>
+                      Ambulance
+                    </Link>
+                    <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
+                  </li>
 
-                  </ul>
-                </div>
+                </ul>
+              </div>
             </div>
-              <div className={` flex flex-col ${!isMobile ? '' : 'items-start'} gap-0  md:w-[45%] py-4 md:py-10 md:mt-28 lg:mt-5`}>
-                <h2 className="  text-xl  font-semibold text-[#EF1E60]">
-                  Our Services
-                </h2>
-                <div className=" flex flex-col pt-5">
-                  <ul className=" space-y-3 text-white">
-                    <li className="relative group">
-                      <Link
-                        href="#"
-                        className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `} >
-                        Free Medical Camps
-                      </Link>
-                      <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
-                    </li>
-                    <li className="relative group">
-                      <Link
-                        href="#"
-                        className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `} >
-                        Free Education
-                      </Link>
-                      <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
-                    </li>
-                    <li className="relative group">
-                      <Link
-                        href="#"
-                        className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `}>
-                        Free Dastarkhwan
-                      </Link>
-                      <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
-                    </li>
-                    <li className="relative group">
-                      <Link
-                        href="#"
-                        className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `}>
-                        Free IT Lab
-                      </Link>
-                      <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
-                    </li>
-                    <li className="relative group">
-                      <Link
-                        href="#"
-                        className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `}>
-                        Free Diagnostic lab
-                      </Link>
-                      <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
-                    </li>
-                  </ul>
-                </div>
+            <div className={` flex flex-col ${!isMobile ? '' : 'items-start'} gap-0  md:w-[45%] py-4 md:py-10 md:mt-28 lg:mt-5`}>
+              <h2 className="  text-xl  font-semibold text-[#EF1E60]">
+                Our Services
+              </h2>
+              <div className=" flex flex-col pt-5">
+                <ul className=" space-y-3 text-white">
+                  <li className="relative group">
+                    <Link
+                      href="#"
+                      className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `} >
+                      Free Medical Camps
+                    </Link>
+                    <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
+                  </li>
+                  <li className="relative group">
+                    <Link
+                      href="#"
+                      className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `} >
+                      Free Education
+                    </Link>
+                    <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
+                  </li>
+                  <li className="relative group">
+                    <Link
+                      href="#"
+                      className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `}>
+                      Free Dastarkhwan
+                    </Link>
+                    <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
+                  </li>
+                  <li className="relative group">
+                    <Link
+                      href="#"
+                      className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `}>
+                      Free IT Lab
+                    </Link>
+                    <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
+                  </li>
+                  <li className="relative group">
+                    <Link
+                      href="#"
+                      className={`text-black  underline-offset-8 decoration-4 decoration-rose-500 hover:decoration-gap-2 transition-all duration-300 ease-in-out hover:text-[#EF1E60] `}>
+                      Free Diagnostic lab
+                    </Link>
+                    <div className="absolute left-0 w-0 h-[3px] bg-[#EF1E60] transition-all duration-300 ease-in-out group-hover:w-full"></div>
+                  </li>
+                </ul>
+              </div>
             </div>
-            </div>
+           </div>
             <div className="flex  flex-col md:-ml-4 md:px-0 px-7     md:pt-10 mt-0 pb-3 md:w-[40%] w-[100%] md:mt-28  lg:mt-5 ">
               <ul>
 
@@ -196,7 +195,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className={`   ${!isMobile && 'border-t border-[#EF1E60] ' }  w-[89%] md:flex-row flex-col flex items-center justify-between py-6  `}>
+      <div className=" md:border-t sm:border-none border-[#EF1E60] w-[89%] md:flex-row flex-col flex items-center justify-between py-6  ">
         <div className="text-sm text-center md:text-left ml-7 md:ml-0 mb-3  mt-3 font-semibold">
           © 2020 All rights reserved | Made with
           <span className="text-[#EF1E60]"> ♥</span> by

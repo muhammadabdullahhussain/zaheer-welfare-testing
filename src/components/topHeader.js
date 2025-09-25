@@ -10,12 +10,14 @@ const TopHeader = () => {
   return (
     <div className="h-11 hidden lg:flex flex-row-reverse justify-between  bg-[#EF1E60]">
       <div className="flex items-center gap-1 text-white pr-28 ">
-        <AiOutlineMail /> <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=zaheerwelfaretrust@gmail.com"
-          className=" text-white hover:rounded-lg hover:shadow-md hover:bg-[#e01452]"
-        >
-          zaheerwelfaretrust@gmail.com
-        </a>
+        <AiOutlineMail /> <a 
+   href="https://mail.google.com/mail/?view=cm&fs=1&to=zaheerwelfaretrust@gmail.com"
+   className=" text-white hover:rounded-lg hover:shadow-md hover:bg-[#e01452]"
+>
+  zaheerwelfaretrust@gmail.com
+</a>
+
+
         <p className="mx-5 flex items-center gap-1"> <AiOutlinePhone />+923194002407</p>
         <button className=" w-24 py-2 text-sm rounded-lg border-b-2 border-white hover:bg-white hover:text-[#EF1E60] hover:border-b-0  transition-all">Be a Sponsor</button>
       </div>

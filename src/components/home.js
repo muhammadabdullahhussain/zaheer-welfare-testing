@@ -35,7 +35,8 @@ const HomeSection = () => {
   const [isUploading, setIsUploading] = useState(null);
   const [imageLoading, setImageLoading] = useState(true);
 
-    const isMobile = useIsMobile()
+  // check if the screen is mobile 
+     const isMobile = useIsMobile()
 
   const handleImageClick = (url) => {
     setImageURL(url);

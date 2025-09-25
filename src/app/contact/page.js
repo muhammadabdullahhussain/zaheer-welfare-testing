@@ -11,7 +11,7 @@ import { FaYoutube, FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { keywords as keyword, metaData } from '@/utils/seo';
 import Link from 'next/link';
-import useIsMobile  from '@/hooks/useIsMobile';
+import useIsMobile from '@/hooks/useIsMobile';
 
 // export const metadata = {
 //   title: metaData.contact.title,
@@ -24,13 +24,14 @@ const Page = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [imageToUpdate, setImageToUpdate] = useState(null);
-  const [selectedFile,setSelectedFile] =useState(null)
+  const [selectedFile, setSelectedFile] = useState(null)
   const [isUploading, setIsUploading] = useState(false); // New state for upload indicator
   const [imageLoading, setImageLoading] = useState(true);
 
   const { isAdmin } = useFirestore();
   const fileInputRef = useRef(null); // Ref to file input for programmatic access
   const isMobile = useIsMobile()
+
   useEffect(() => {
     async function fetchImages() {
       try {
@@ -98,7 +99,7 @@ const Page = () => {
         console.error('Error handling file change:', error);
         setError('Error updating image. Check console for details.');
       } finally {
-        setSelectedFile(null); 
+        setSelectedFile(null);
         setIsUploading(false)
       }
     }
@@ -117,23 +118,23 @@ const Page = () => {
   return (
     <>
       <div className="px-5 md:px-12 lg:px-32">
-      {isUploading && (
-                <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
-                    <div className="absolute inset-0 backdrop-blur-sm"></div>
-                    <div className="relative flex flex-col items-center justify-center z-10">
-                        <div className="border-t-4 border-blue-500 border-solid rounded-full w-16 h-16 animate-spin"></div>
-                        <p className="mt-4 text-white">Updating...</p>
-                    </div>
-                </div>
-            )}
-          {imageLoading ? (
+        {isUploading && (
+          <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
+            <div className="absolute inset-0 backdrop-blur-sm"></div>
+            <div className="relative flex flex-col items-center justify-center z-10">
+              <div className="border-t-4 border-blue-500 border-solid rounded-full w-16 h-16 animate-spin"></div>
+              <p className="mt-4 text-white">Updating...</p>
+            </div>
+          </div>
+        )}
+        {imageLoading ? (
 
-                    <div className="relative w-full md:h-[500px] mt-20 bg-[#BFBFBF] animate-pulse">
-                      </div>):(
+          <div className="relative w-full md:h-[500px] mt-20 bg-[#BFBFBF] animate-pulse">
+          </div>) : (
 
-        <div className="relative w-full md:h-[500px] mt-20">
-          {images.length > 0 && (
-            <div>
+          <div className="relative w-full md:h-[500px] mt-20">
+            {images.length > 0 && (
+              <div>
                 {isMobile && <Image
                   width={200}
                   height={500}
@@ -166,26 +167,30 @@ const Page = () => {
             {!isMobile ? (<div className="relative w-full h-[400px]">
               {/* Background Image */}
               <Image
-                  src="https://arynews-1313565080.cos.ap-singapore.myqcloud.com/zip-archives/wp-content/uploads/2018/06/charity.jpg"   // agar image public folder me hai (public/needy.png)
-                  alt="Needy Child"
-                  width={500}        // required
-                  height={400}       // required
-                  className="w-full h-full object-cover bg-top rounded-lg"
+                src="https://arynews-1313565080.cos.ap-singapore.myqcloud.com/zip-archives/wp-content/uploads/2018/06/charity.jpg"   // agar image public folder me hai (public/needy.png)
+                alt="Needy Child"
+                width={500}        // required
+                height={400}       // required
+                 className="w-full h-full object-cover bg-top rounded-lg"
               />
-                <div className="absolute inset-0 bg-black/50 rounded-lg"></div>
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-                  <h2 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg">
-                    Contact
-                  </h2>
-                  <p className="mt-4 text-lg md:text-2xl text-[#FF9A00] italic font-medium drop-shadow-md">
-                    Get in Touch
-                  </p>
-                </div>
-              </div>)
-                : (
-                  <div className="absolute inset-0 hidden md:flex  justify-center   items-center lg:justify-start md:ml-28">
-                    <h2 className="text-xl mt-5 md:text-4xl font-semibold text-[#FF165D] mb-3">Contact </h2>
-                    <p className='text-[#FF9A00] text-3xl  mt-16 italic'>Get in Touch</p>
+
+              {/* Dark Overlay for readability */}
+              <div className="absolute inset-0 bg-black/50 rounded-lg"></div>
+
+              {/* Text Content */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+                <h2 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg">
+                  Contact
+                </h2>
+                <p className="mt-4 text-lg md:text-2xl text-[#FF9A00] italic font-medium drop-shadow-md">
+                  Get in Touch
+                </p>
+              </div>
+            </div>)
+              : (
+                <div className="absolute inset-0 hidden md:flex  justify-center   items-center lg:justify-start md:ml-28">
+                  <h2 className="text-xl mt-5 md:text-4xl font-semibold text-[#FF165D] mb-3">Contact </h2>
+                  <p className='text-[#FF9A00] text-3xl  mt-16 italic'>Get in Touch</p>
                 </div>
               )}
           </div>

@@ -1,6 +1,5 @@
 import { Roboto } from "next/font/google";
 import Head from 'next/head';
-
 import "./globals.css";
 import TopHeader from "@/components/topHeader";
 import PracticeNavbar from "@/components/practiceNavbar";
@@ -9,7 +8,7 @@ import Footer from "@/components/footer";
 import ScrollToTopButton from "@/components/ScrollButton";
 import { keywords as keyword } from "@/utils/seo";
 import { FirestoreProvider } from "@/lib/firestoreContext";
-import HomeSectionHero from "@/components/homeSectionHero";
+import HomeSectionHero from "@/components/HomeSectionHero";
 
 const roboto = Roboto({
   subsets: ["latin"],
